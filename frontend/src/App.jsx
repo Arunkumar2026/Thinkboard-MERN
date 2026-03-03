@@ -7,9 +7,17 @@ import toast from "react-hot-toast"
 
 const App = () => {
   return (
-    <div>
-      <button onClick={(() => toast.success("successfully"))} className="text-red-500 p-4 bg-pink-300 mt-3 ml-3" >Success Message</button><br/><br/>
+    <div data-theme="forest">
+      <button onClick={(() => toast.success("successfully"))} className="text-red-500 p-4 bg-pink-300 mt-3 ml-3 rounded-br-full" >Success Message</button><br/><br/>
       <button onClick={(() => toast.error("404 error"))}>Error Message</button><b/>
+      <button className="btn btn-outline">Click Me</button>
+      <button className="btn">Button</button>
+      <button className="btn btn-neutral">Neutral</button>
+      <button className="btn btn-primary">Primary</button>
+      <button className="btn btn-secondary">Secondary</button>
+      <button className="btn btn-accent">Accent</button>
+      <button className="btn btn-ghost">Ghost</button>
+      <button className="btn btn-link">Link</button>
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/create" element={<CreatePage/>} />
