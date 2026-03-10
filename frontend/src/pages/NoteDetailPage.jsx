@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router";
 import api from "../lib/axios";
+import { LoaderIcon } from "lucide-react";
 
 
 const NoteDetailPage = () => {
@@ -31,6 +32,14 @@ const NoteDetailPage = () => {
   }, [id]);
 
   console.log({note})
+
+  if (loading){
+    return (
+      <div className="min-h-screen bg-base-200 flex items-center justify-center">
+        <LoaderIcon className="animate-spin size-10"/>
+      </div>
+    )
+  }
   return (
     <div>NoteDetailPage</div>
   )
